@@ -409,6 +409,9 @@ h4 {
   .about figure {
     margin-inline: auto;
   }
+  body{
+    background-color: red;
+  }
   .banner {
     height: 70dvh;
     background-position: right center;
