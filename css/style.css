@@ -439,6 +439,9 @@ h4 {
   html{
     font-size: 13px;
   }
+  body{
+    background-color: red;
+  }
   .col-xs-100{
     width: 100%;
   }
