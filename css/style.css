@@ -14,7 +14,7 @@
   --orange: #ff6600;
   --brown: #9d0101;
 }
-html{
+html {
   font-size: 16px;
 }
 body {
@@ -143,7 +143,7 @@ nav,
   background-size: cover;
   background-color: #33333357;
   background-blend-mode: multiply;
-  /* background-position: center; */
+  background-position: center;
 }
 .banner .container {
   height: 100%;
@@ -345,13 +345,13 @@ h4 {
 /* ========== Tablet Landscape ≤991px [lg]] ======================== */
 
 @media screen and (max-width: 991px) {
-  html{
+  html {
     font-size: 15px;
   }
-  .col-lg-100{
+  .col-lg-100 {
     width: 100%;
   }
-  .lg-mb-2{
+  .lg-mb-2 {
     margin-bottom: 2.5rem;
   }
   .navToogler {
@@ -388,46 +388,50 @@ h4 {
   .navbar_brand {
     width: 100%;
   }
-
 }
 
 /* ========== Tablet Portrait ≤767px [md] ======================== */
 
 @media screen and (max-width: 767px) {
-  html{
+  html {
     font-size: 14px;
   }
-  .col-md-100{
+  .col-md-100 {
     width: 100%;
   }
-  .col-md-50{
+  .col-md-50 {
     width: 50%;
   }
-  .md-mb-2{
+  .md-mb-2 {
     margin-bottom: 2.5rem;
   }
 
-  .about figure{
+  .about figure {
     margin-inline: auto;
+  }
+  .banner {
+    height: 70dvh;
+    background-position: right center;
   }
 }
 
 /* ========== Mobile Landscape ≤575px [sm] ======================== */
 
 @media screen and (max-width: 575px) {
-  html{
+  html {
     font-size: 14px;
   }
-  .col-sm-100{
+  .col-sm-100 {
     width: 100%;
   }
-  .sm-mb-2{
+  .sm-mb-2 {
     margin-bottom: 2.5rem;
   }
-  h2, .about p {
+  h2,
+  .about p {
     text-align: center;
   }
-  hr{
+  hr {
     display: none;
   }
 }
@@ -435,16 +439,12 @@ h4 {
 /* ========== Mobile Portrait ≤320px [xs] ======================== */
 
 @media screen and (max-width: 320px) {
-  html{
+  html {
     font-size: 13px;
   }
-  body{
-    background-color: red;
-  }
-  .col-xs-100{
-    width: 100%;
-  }
-  .xs-md-2{
-    margin-bottom: 2.5rem;
+
+  .banner {
+    height: 60dvh;
+    background-position: calc(90% + 20px) center;
   }
 }
