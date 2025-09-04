@@ -1,0 +1,448 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Knewave&display=swap");
+
+/* font-family: "Knewave", system-ui;
+   font-family: "Inter", sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --white: #ffffff;
+  --black: #333333;
+  --orange: #ff6600;
+  --brown: #9d0101;
+}
+html{
+  font-size: 16px;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: var(--black);
+}
+ul {
+  list-style: none;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.container {
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.section_padding {
+  padding: 2rem;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -15px;
+}
+.col {
+  padding: 0 15px;
+}
+.col-50 {
+  width: 50%;
+}
+.col-25 {
+  width: 25%;
+}
+.col-30 {
+  width: 30%;
+}
+.col-38 {
+  width: 38%;
+}
+.col-40 {
+  width: 40%;
+}
+.col-33 {
+  width: 33.33%;
+}
+
+.mt1 {
+  margin-top: 1rem;
+}
+.mt2 {
+  margin-top: 2rem;
+}
+/* ======================= Navbar ======================= */
+.navbar {
+  background-color: var(--black);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  width: 100%;
+}
+nav {
+  padding: 1.5rem 0;
+}
+nav,
+.navbar_brand,
+.navList,
+.navbar_items {
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: center; */
+  align-items: center;
+  color: var(--white);
+}
+.navLogo a {
+  font-size: 1.5rem;
+  font-family: "Knewave", system-ui;
+  color: var(--white);
+  font-weight: 400;
+}
+.navToogler {
+  font-size: 30px;
+  display: none;
+}
+.navList {
+  justify-content: flex-end;
+  gap: 3rem;
+}
+.navList li {
+  font-weight: 600;
+}
+.navbar_items {
+  justify-content: space-between;
+  gap: 8rem;
+}
+.btn {
+  padding: 0.7rem 1.7rem;
+  border-radius: 4px;
+  background-color: var(--orange);
+  color: var(--white);
+  font-weight: 700;
+}
+
+/* ======================= Banner ======================= */
+
+.banner {
+  margin-top: 5.5rem;
+  /* height: 666px; */
+  height: 90vh;
+  height: 90dvh;
+  background-image: url("../images/BannerImage.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #33333357;
+  background-blend-mode: multiply;
+  /* background-position: center; */
+}
+.banner .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.banner_content {
+  /* font-size: 4rem; */
+  font-size: clamp(1.75rem, 5vw, 4rem);
+  font-weight: 600;
+  color: var(--white);
+  max-width: 713px;
+  width: 100%;
+}
+
+/* ======================= About us ======================= */
+.b {
+  border: 2px solid black;
+}
+
+h2 {
+  /* font-size: 2rem; */
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 600;
+  text-align: center;
+  /* margin-bottom: 4.2rem; */
+  margin-bottom: clamp(2rem, 5vw, 4.2rem);
+}
+h2 span {
+  color: var(--orange);
+}
+
+.about figure {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  /* max-width: 500px; */
+  max-width: clamp(250px, 50vw, 500px);
+  overflow: hidden;
+  line-height: 1;
+  border-radius: 4px;
+  margin-left: auto;
+}
+h3 {
+  /* font-size: 1.5rem; */
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 600;
+  /* margin-bottom: min(3rem, 8%); */
+  margin-bottom: clamp(1.5rem, 5vw, 3rem);
+}
+.about p {
+  margin-bottom: clamp(0.5rem, 3vw, 1rem);
+  line-height: 1.6;
+}
+
+/* ======================= Portfolios ======================= */
+.portfolio-card {
+  /* border: 1px solid black; */
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.25rem;
+}
+.portfolios-card-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 12;
+  text-align: center;
+  padding: 15px 0;
+  background-color: hsl(0, 0%, 0%, 0.5);
+  color: var(--white);
+}
+.portfolios-card-content h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* ======================= Packages ======================= */
+
+.packages {
+  text-align: center;
+}
+.packages-card {
+  /* max-width: 250px; */
+  /* width: 100%; */
+  margin: 0 auto;
+  padding: 2.25rem 3.5rem;
+  border: 1px solid #000000;
+  border-radius: 0.25rem;
+}
+h4 {
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--brown);
+  margin-bottom: 1.125rem;
+}
+.packages-card .btn {
+  background-color: #8f8f8f;
+  font-weight: 400;
+}
+/* =======================  Testimonials ======================= */
+.testimonials {
+  text-align: center;
+}
+.testimonials figure {
+  width: 138px;
+  height: 138px;
+  border-radius: 50%;
+  margin: 0 auto 2rem;
+}
+.testimonialsCard h3 {
+  margin-bottom: 0.5rem;
+}
+.testimonialsCard p {
+  margin-top: 1.75rem;
+}
+.testimonialsCard {
+  border: 1px solid #000000;
+  padding: 3.5rem 4.35rem;
+}
+
+/* ======================= Blogs ======================= */
+.blog-card {
+  text-align: center;
+}
+.blog-card figure {
+  width: 100%;
+  max-width: 364px;
+  overflow: hidden;
+  line-height: 1;
+  border-radius: 4px;
+  margin: 0 auto 1.75rem;
+}
+.blog-card h3 {
+  font-size: 1.25rem;
+}
+.blog-card span {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.blog-card p {
+  font-size: 1rem;
+  font-weight: 400;
+  max-width: 16.25rem;
+  width: 100%;
+  margin: 1rem auto;
+}
+.blog-card .btn {
+  margin-top: 0.5rem;
+}
+
+/* ======================= Footer ======================= */
+.footer {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.footer h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin: 0;
+}
+.footer p {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 2rem auto;
+}
+
+.footer .btn {
+  padding: 0.5rem 1.125rem;
+  font-size: 0.75rem;
+}
+.social-media {
+  display: flex;
+  justify-content: flex-start;
+  gap: 2rem;
+  font-size: 1.75rem;
+}
+.social-media a i {
+  color: var(--white);
+}
+
+.footer .col-40::before {
+  content: "";
+  width: 1px;
+  height: 100%;
+  background-color: white;
+  top: 0;
+  right: 0;
+  /* border-right: 1px solid white; */
+}
+.footer .copyright {
+  margin: 0;
+}
+
+/* ======================= Media Query ======================= */
+
+/* ========== Tablet Landscape ≤991px [lg]] ======================== */
+
+@media screen and (max-width: 991px) {
+  html{
+    font-size: 15px;
+  }
+  .col-lg-100{
+    width: 100%;
+  }
+  .lg-mb-2{
+    margin-bottom: 2.5rem;
+  }
+  .navToogler {
+    display: block; /* Show hamburger on mobile */
+    cursor: pointer;
+  }
+
+  .navbar_items {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--black);
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    display: none; /* Hide by default */
+  }
+
+  .navbar_items.active {
+    display: flex; /* Show when toggled */
+  }
+
+  .navList {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .navList li {
+    margin: 0;
+  }
+  .navbar_brand {
+    width: 100%;
+  }
+
+}
+
+/* ========== Tablet Portrait ≤767px [md] ======================== */
+
+@media screen and (max-width: 767px) {
+  html{
+    font-size: 14px;
+  }
+  .col-md-100{
+    width: 100%;
+  }
+  .col-md-50{
+    width: 50%;
+  }
+  .md-mb-2{
+    margin-bottom: 2.5rem;
+  }
+
+  .about figure{
+    margin-inline: auto;
+  }
+}
+
+/* ========== Mobile Landscape ≤575px [sm] ======================== */
+
+@media screen and (max-width: 575px) {
+  html{
+    font-size: 14px;
+  }
+  .col-sm-100{
+    width: 100%;
+  }
+  .sm-mb-2{
+    margin-bottom: 2.5rem;
+  }
+  h2, .about p {
+    text-align: center;
+  }
+  hr{
+    display: none;
+  }
+
+}
+
+/* ========== Mobile Portrait ≤320px [xs] ======================== */
+
+@media screen and (max-width: 320px) {
+  html{
+    font-size: 13px;
+  }
+  .col-sm-100{
+    width: 100%;
+  }
+  .xs-md-2{
+    margin-bottom: 2.5rem;
+  }
+}
